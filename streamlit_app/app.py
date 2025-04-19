@@ -67,8 +67,10 @@ def decrypt_data(token, passkey):
     except Exception:
         return None
 
+import os
+
 # Backend API URLs
-BACKEND_URL = "http://127.0.0.1:8000"
+BACKEND_URL = os.getenv("BACKEND_URL", "http://127.0.0.1:8000")
 
 # Navigation
 menu = ["🏠 Home", "📂 Store Data", "🔍 Retrieve Data", "🔑 Login"]
